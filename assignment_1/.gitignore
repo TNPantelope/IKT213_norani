@@ -16,17 +16,11 @@ env/
 *.tmp
 *.swp
 
-# Test / output media files
+# video file
 *.mp4
-*.avi
-*.mov
-*.jpg
-*.jpeg
-*.png
-*.bmp
 
-# Any text outputs
-camera_outputs.txt
+
+
 
 # Jupyter
 .ipynb_checkpoints
