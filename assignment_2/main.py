@@ -88,27 +88,27 @@ def main():
     x_1 = image.shape[1] - 130
     y_0 = 80
     y_1 = image.shape[0] - 130
-    #crop(image, x_0, x_1, y_0, y_1)
+    crop(image, x_0, x_1, y_0, y_1)
 
     #resize part
-    #resize(image, 200, 200)
+    resize(image, 200, 200)
 
     #copy part
     height, width, channels = image.shape
     emptyPictureArray = np.zeros((height, width, 3), dtype=np.uint8)
-    #copy(image, emptyPictureArray)
+    copy(image, emptyPictureArray)
 
     #grayscale part
-    #grayscale(image)
+    grayscale(image)
 
     #hsv part
-    #hsv(image)
+    hsv(image)
 
     #color shifting
-    #hue_shifted(image, emptyPictureArray, 50)
+    hue_shifted(image, emptyPictureArray, 50)
 
     #smoothing
-    #smoothing(image)
+    smoothing(image)
 
     #rotation
     rotation(image, 90)
