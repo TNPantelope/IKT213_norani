@@ -1,0 +1,5 @@
+both orb bf and siftflann had the same accuracy on the data_check samples.
+but orbbf was almost 3x faster, so a lot more efficient.
+
+that was even more clear with the uia images, a little over 7x faster.
+so with orbbf being a lot faster and needing less resources id say thats the "winner"

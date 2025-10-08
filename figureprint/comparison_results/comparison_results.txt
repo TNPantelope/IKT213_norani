@@ -1,0 +1,63 @@
+testing orbbf data_check
+different_1: 10 matches, 0.071s
+different_10: 5 matches, 0.006s
+different_2: 2 matches, 0.006s
+different_3: 5 matches, 0.006s
+different_4: 8 matches, 0.006s
+different_5: 4 matches, 0.006s
+different_6: 6 matches, 0.005s
+different_7: 8 matches, 0.006s
+different_8: 6 matches, 0.006s
+different_9: 11 matches, 0.006s
+same_1: 38 matches, 0.006s
+same_10: 35 matches, 0.006s
+same_2: 21 matches, 0.005s
+same_3: 8 matches, 0.006s
+same_4: 9 matches, 0.006s
+same_5: 48 matches, 0.006s
+same_6: 24 matches, 0.006s
+same_7: 25 matches, 0.006s
+same_8: 54 matches, 0.006s
+same_9: 15 matches, 0.006s
+
+orbbf results:
+acc: 85.0%
+avg_time: 0.0090s
+TN=10 FP=0 FN=3 TP=7
+
+testing siftflann data_check
+different_1: 8 matches, 0.026s
+different_10: 6 matches, 0.025s
+different_2: 4 matches, 0.024s
+different_3: 11 matches, 0.025s
+different_4: 17 matches, 0.025s
+different_5: 6 matches, 0.023s
+different_6: 8 matches, 0.023s
+different_7: 8 matches, 0.024s
+different_8: 5 matches, 0.025s
+different_9: 16 matches, 0.024s
+same_1: 66 matches, 0.024s
+same_10: 49 matches, 0.024s
+same_2: 36 matches, 0.026s
+same_3: 13 matches, 0.026s
+same_4: 19 matches, 0.025s
+same_5: 34 matches, 0.024s
+same_6: 9 matches, 0.026s
+same_7: 43 matches, 0.025s
+same_8: 83 matches, 0.025s
+same_9: 23 matches, 0.024s
+
+siftflann results:
+acc: 85.0%
+avg_time: 0.0247s
+TN=10 FP=0 FN=3 TP=7
+
+
+UiA front1.png vs UiA front3.jpg:
+  orbbf:     21 matches, 0.017s
+  siftflann: 16 matches, 0.124s
+
+
+uia:
+orb total: 0.017s
+sift total: 0.124s
