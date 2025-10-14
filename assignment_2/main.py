@@ -49,11 +49,13 @@ def hsv(image):
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
-def hue_shifted(image, emptyPicutreArray, hue):
-    emptyPicutreArray[:] = image[:]
-    emptyPicutreArray = np.clip(emptyPicutreArray + hue, 0, 255).astype(np.uint8)
-    cv2.imshow('hue_shifted', emptyPicutreArray)
-    cv2.imwrite('solutions/hue_shifted.png', emptyPicutreArray)
+def hue_shifted(image, emptyPictureArray, hue):
+    hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+    emptyPictureArray[:] = hsv_image[:]
+    emptyPictureArray[:, :, 0] = (emptyPictureArray[:, :, 0].astype(np.int16) + hue) % 180
+    hue_shifted_image = cv2.cvtColor(emptyPictureArray, cv2.COLOR_HSV2BGR)
+    cv2.imshow('hue_shifted', hue_shifted_image)
+    cv2.imwrite('solutions/hue_shiftedfixed.png', hue_shifted_image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
@@ -71,8 +73,14 @@ def rotation(image, rotation_angle):
         cv2.imwrite('solutions/rotated.png', rotated_image)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
+    elif rotation_angle == 180:
+        rotated_image = cv2.rotate(image, cv2.ROTATE_180)
+        cv2.imshow('rotated', rotated_image)
+        cv2.imwrite('solutions/rotated180.png', rotated_image)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
     else:
-        print("wrong rotatoin angle")
+        print("wrong rotation angle")
 
 
 def main():
@@ -112,7 +120,7 @@ def main():
 
     #rotation
     rotation(image, 90)
-
+    rotation(image, 180)
 
 if __name__ == "__main__":
     main()
